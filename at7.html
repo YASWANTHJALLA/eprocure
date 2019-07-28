@@ -1,0 +1,355 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body background="images/image6.jpg">
+<center><br><br><br></center>
+
+<div id="main" style="position:absolute;top:170px;left:170px;width:1000px;height:4900px;border-radius: 40px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 7px 1px blue;background-color:white;border:2px solid brown;"
+</div>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:30px auto 0px auto;
+    width:800px;
+    height:55px;
+    padding:0px 20px 0px 20px;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:20px;
+    /*Styling the background with fading effect*/
+     
+    background:#A84040;
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 20px #FFFFFF;
+    border:1px solid #000;     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:10px 0px 10px 0px;
+    display: block;
+    position:relative;
+    text-align:center;
+    margin-right:60px;
+    margin-top:7px;
+    border:none;
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    text-shadow:1px 1px 10px #FFCC99;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FFF;
+    text-shadow:1px 1px 10px #CCC;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.php">Home</a></li>
+<li><a href="ebooks.php">E-books</a></li>
+<li><a href="placements.php">Placement Papers</a></li>
+<li><a href="quiz.php">Quiz</a></li>
+<li><a href="contactus.php">Contact Us</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>   
+
+<style>
+#menbut
+{
+border:1px solid black;background:#A84040;border-radius:10px;box-shadow: inset 1px 1px 5px #FFFFFF;-moz-box-shadow: inset 1px 1px 5px #FFFFFF;-webkit-box-shadow: inset 1px 1px 10px #FFFFFF;width:180px;height:38px;color:black;font-family:Andalus;font-size:23px;text-align:center;text-shadow:1px 1px 10px #FFCC99;
+}
+#menbut:hover
+{
+border:none;background-color:grey;width:180px;height:38px;color:white;font-family:Times New Roman;font-size:20px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 2px 1px red;text-shadow:1px 1px 1px black;
+}
+</style>
+</body>
+<div id="image"
+style="position:absolute;top:100px;left:20px;">
+        <img src="images/quiz.jpg">
+</div>
+
+<HEAD>
+
+<script LANGUAGE="JavaScript">
+
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+
+
+var score = 0;
+ans[1] = "b";
+ans[2] = "a";
+ans[3] = "c";
+ans[4] = "c";
+ans[5] = "a";
+ans[6] = "b";
+ans[7] = "c";
+ans[8] = "a";
+ans[9] = "b";
+ans[10] = "d";
+ans[11] = "e";
+ans[12] = "b";
+ans[13] = "c";
+ans[14] = "c";
+ans[15] = "b";
+ans[16] = "c";
+ans[17] = "b";
+ans[18] = "c";
+ans[19] = "b";
+ans[20] = "a";
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText=" ";
+for(i=1;i<=20;i++){
+answerText=answerText+"\nQuestion :"+i+"        ";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"Correct answer: "+ans[i]+"    ";;
+}
+else{
+answerText=answerText+"Correct! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\n\nYour total score is : "+score+"\n";
+
+alert(answerText);
+
+}
+
+</script>
+</HEAD>
+
+<div id="quiz"
+style="position:absolute;top:100px;left:200px;">
+<font size="4">
+<p class="question">
+1.   The least number which when divided by 5, 6 , 7 and 8 leaves a remainder 3, but when divided by 9 leaves no remainder, is: </p>
+<ul class="answers">
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a)&nbsp;&nbsp;1677&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b)&nbsp;&nbsp;1683<br><br>   
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c)&nbsp;&nbsp;2523&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d)&nbsp;&nbsp;3363<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+2.   If	144/0.144=14.4/x,then the value of x is: </p>
+<ul class="answers">
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a)&nbsp;&nbsp;0.0144&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b)&nbsp;&nbsp;1.44<br><br> 
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c)&nbsp;&nbsp;14.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d)&nbsp;&nbsp;144<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+3.   617 + 6.017 + 0.617 + 6.0017 = ?</p>
+<ul class="answers">
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a)&nbsp;&nbsp;6.296&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b)&nbsp;&nbsp;62.965<br><br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c)&nbsp;&nbsp;629.6357&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d)&nbsp;&nbsp;None of these<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+4.   (sqrt(3)-sqrt(1/3))^2 simplifies to:</p>
+<ul class="answers">
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a)&nbsp;&nbsp;3/4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b)&nbsp;&nbsp;4/5<br><br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c)&nbsp;&nbsp;4/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d)&nbsp;&nbsp;None of these<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+5.   The captain of a cricket team of 11 members is 26 years old and the wicket keeper is 3 years older. If the ages of these two are excluded, the average age of the remaining players is one year less than the average age of the whole team. What is the average age of the team?</p>
+<ul class="answers">
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a)&nbsp;&nbsp;23 years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b)&nbsp;&nbsp;24 years<br><br> 
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c)&nbsp;&nbsp;25 years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d)&nbsp;&nbsp;None of these<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+6.   The present ages of three persons in proportions 4 : 7 : 9. Eight years ago, the sum of their ages was 56. Find their present ages (in years).</p>
+<ul class="answers">
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a)&nbsp;&nbsp;8, 20, 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b)&nbsp;&nbsp;16, 28, 36<br><br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c)&nbsp;&nbsp;20, 35, 45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d)&nbsp;&nbsp;None of these
+ <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 7):
+Each of the questions given below consists of a statement and / or a question and two statements numbered I and II given below it. You have to decide whether the data provided in the statement(s) is / are sufficient to answer the given question. Read the both statements and<br><br>
+Give answer (A) if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question.<br><br>
+Give answer (B) if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question.<br><br>
+Give answer (C) if the data either in Statement I or in Statement II alone are sufficient to answer the <br>question.<br><br>
+Give answer (D) if the data even in both Statements I and II together are not sufficient to answer the <br>question.<br><br>
+Give answer(E) if the data in both Statements I and II together are necessary to answer the question.<br><br>
+7.   Divya is twice as old as Shruti. What is the difference in their ages?<br><br>
+     I. Five years hence, the ratio of their ages would be 9 : 5.<br><br>
+     II.Ten years back, the ratio of their ages was 3 : 1.</p>
+<ul class="answers">
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a)&nbsp;&nbsp;I alone sufficient while II alone not sufficient to answer<br><br> 
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b)&nbsp;&nbsp;II alone sufficient while I alone not sufficient to answer<br><br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c)&nbsp;&nbsp;Either I or II alone sufficient to answer<br><br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d)&nbsp;&nbsp;Both I and II are not sufficient to answer<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+8.   (256)^0.16 x (256)^0.09 = ?</p>
+<ul class="answers">
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a)&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b)&nbsp;&nbsp;16<br><br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c)&nbsp;&nbsp;64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d)&nbsp;&nbsp;256.25<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+9.   Three partners shared the profit in a business in the ratio 5 : 7 : 8. They had partnered for 14 months, 8 months and 7 months respectively. What was the ratio of their investments?</p>
+<ul class="answers">
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a)&nbsp;&nbsp;5 : 7 : 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b)&nbsp;&nbsp;20 : 49 : 64<br><br> 
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c)&nbsp;&nbsp;38 : 28 : 21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d)&nbsp;&nbsp;None of these<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+10.   A starts business with Rs. 3500 and after 5 months, B joins with A as his partner. After a year, the profit is divided in the ratio 2 : 3. What is B's contribution in the capital?</p>
+<ul class="answers">
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a)&nbsp;&nbsp;Rs. 7500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b)&nbsp;&nbsp;Rs. 8000<br><br> 
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c)&nbsp;&nbsp;Rs. 8500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d)&nbsp;&nbsp;Rs. 9000<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 11):
+Each of the questions given below consists of a statement and / or a question and two statements numbered I and II given below it. You have to decide whether the data provided in the statement(s) is / are sufficient to answer the given question. Read the both statements and<br><br>
+Give answer (A) if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question.<br><br>
+Give answer (B) if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question.<br><br>
+Give answer (C) if the data either in Statement I or in Statement II alone are sufficient to answer the <br>question.<br><br>
+Give answer (D) if the data even in both Statements I and II together are not sufficient to answer the <br>question.<br><br>
+Give answer(E) if the data in both Statements I and II together are necessary to answer the question.<br><br>
+11.   Ravi, Gagan and Nitin are running a business firm in partnership. What is Gagan's share in the profit earned by them?<br><br>
+      I. Ravi, Gagan and Nitin invested the amounts in the ratio of 2 : 4 : 7.<br><br>
+      II.Nitin's share in the profit is Rs. 8750.</p>
+<ul class="answers">
+<input type=radio name="q11" value="a" onClick="Engine(11, this.value)">a)&nbsp;&nbsp;I alone sufficient while II alone not sufficient to answer<br><br> 
+<input type=radio name="q11" value="b" onClick="Engine(11, this.value)">b)&nbsp;&nbsp;II alone sufficient while I alone not sufficient to answer<br><br>  
+<input type=radio name="q11" value="c" onClick="Engine(11, this.value)">c)&nbsp;&nbsp;Either I or II alone sufficient to answer<br><br> 
+<input type=radio name="q11" value="d" onClick="Engine(11, this.value)">d)&nbsp;&nbsp;Both I and II are not sufficient to answer<p>
+<input type=radio name="q11" value="e" onClick="Engine(11, this.value)">e)&nbsp;&nbsp;Both I and II are necessary to answer<p>
+
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+12.   A wheel that has 6 cogs is meshed with a larger wheel of 14 cogs. When the smaller wheel has made 21 revolutions, then the number of revolutions mad by the larger wheel is:</p>
+<ul class="answers">
+<input type=radio name="q12" value="a" onClick="Engine(12, this.value)">a)&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="b" onClick="Engine(12, this.value)">b)&nbsp;&nbsp;9<br><br>
+<input type=radio name="q12" value="c" onClick="Engine(12, this.value)">c)&nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="d" onClick="Engine(12, this.value)">d)&nbsp;&nbsp;49<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+13.   10 women can complete a work in 7 days and 10 children take 14 days to complete the work. How many days will 5 women and 10 children take to complete the work?</p>
+<ul class="answers">
+<input type=radio name="q13" value="a" onClick="Engine(13, this.value)">a)&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q13" value="b" onClick="Engine(13, this.value)">b)&nbsp;&nbsp;5<br><br>  
+<input type=radio name="q13" value="c" onClick="Engine(13, this.value)">c)&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q13" value="d" onClick="Engine(13, this.value)">d)&nbsp;&nbsp;9<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+14.   Two pipes can fill a tank in 20 and 24 minutes respectively and a waste pipe can empty 3 gallons per minute. All the three pipes working together can fill the tank in 15 minutes. The capacity of the tank is:</p>
+<ul class="answers">
+<input type=radio name="q14" value="a" onClick="Engine(14, this.value)">a)&nbsp;&nbsp;60 gallons&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q14" value="b" onClick="Engine(14, this.value)">b)&nbsp;&nbsp;100 gallons<br><br>  
+<input type=radio name="q14" value="c" onClick="Engine(14, this.value)">c)&nbsp;&nbsp;120 gallons&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q14" value="d" onClick="Engine(14, this.value)">d)&nbsp;&nbsp;180 gallons   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+15.   A train 240 m long passes a pole in 24 seconds. How long will it take to pass a platform 650 m long?</p>
+<ul class="answers">
+<input type=radio name="q15" value="a" onClick="Engine(15, this.value)">a)&nbsp;&nbsp;65 sec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q15" value="b" onClick="Engine(15, this.value)">b)&nbsp;&nbsp;89 sec<br><br>
+<input type=radio name="q15" value="c" onClick="Engine(15, this.value)">c)&nbsp;&nbsp;100 sec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q15" value="d" onClick="Engine(15, this.value)">d)&nbsp;&nbsp;150 sec  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+16.   A jogger running at 9 kmph alongside a railway track in 240 metres ahead of the engine of a 120 metres long train running at 45 kmph in the same direction. In how much time will the train pass the jogger?</p>
+<ul class="answers">
+<input type=radio name="q16" value="a" onClick="Engine(16, this.value)">a)&nbsp;&nbsp;3.6 sec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q16" value="b" onClick="Engine(16, this.value)">b)&nbsp;&nbsp;18 sec<br><br>
+<input type=radio name="q16" value="c" onClick="Engine(16, this.value)">c)&nbsp;&nbsp;36 sec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="d" onClick="Engine(16, this.value)">d)&nbsp;&nbsp;72 sec <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+17.   Two goods train each 500 m long, are running in opposite directions on parallel tracks. Their speeds are 45 km/hr and 30 km/hr respectively. Find the time taken by the slower train to pass the driver of the faster one.</p>
+<ul class="answers">
+<input type=radio name="q17" value="a" onClick="Engine(17, this.value)">a)&nbsp;&nbsp;12 sec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q17" value="b" onClick="Engine(17, this.value)">b)&nbsp;&nbsp;24 sec<br><br>  
+<input type=radio name="q17" value="c" onClick="Engine(17, this.value)">c)&nbsp;&nbsp;48 sec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="d" onClick="Engine(17, this.value)">d)&nbsp;&nbsp;60 sec<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+18.   A boatman goes 2 km against the current of the stream in 1 hour and goes 1 km along the current in 10 minutes. How long will it take to go 5 km in stationary water?</p>
+<ul class="answers">
+<input type=radio name="q18" value="a" onClick="Engine(18, this.value)">a)&nbsp;&nbsp;40 minutes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q18" value="b" onClick="Engine(18, this.value)">b)&nbsp;&nbsp;1 hour<br><br>  
+<input type=radio name="q18" value="c" onClick="Engine(18, this.value)">c)&nbsp;&nbsp;1 hr 15 min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q18" value="d" onClick="Engine(18, this.value)">d)&nbsp;&nbsp;1 hr 30 min<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+19.   8 litres are drawn from a cask full of wine and is then filled with water. This operation is performed three more times. The ratio of the quantity of wine now left in cask to that of water is 16 : 65. How much wine did the cask hold originally?</p>
+<ul class="answers">
+<input type=radio name="q19" value="a" onClick="Engine(19, this.value)">a)&nbsp;&nbsp;18 litres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q19" value="b" onClick="Engine(19, this.value)">b)&nbsp;&nbsp;24 litres<br><br> 
+<input type=radio name="q19" value="c" onClick="Engine(19, this.value)">c)&nbsp;&nbsp;34 litres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q19" value="d" onClick="Engine(19, this.value)">d)&nbsp;&nbsp;42 litres<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+20.   A bag contains 2 red, 3 green and 2 blue balls. Two balls are drawn at random. What is the probability that none of the balls drawn is blue?</p>
+<ul class="answers">
+<input type=radio name="q20" value="a" onClick="Engine(20, this.value)">a)&nbsp;&nbsp;10/21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q20" value="b" onClick="Engine(20, this.value)">b)&nbsp;&nbsp;11/21<br><br>  
+<input type=radio name="q20" value="c" onClick="Engine(20, this.value)">c)&nbsp;&nbsp;2/7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="d" onClick="Engine(20, this.value)">d)&nbsp;&nbsp;5/7<p>
+</ul>
+
+</font>
+</div>
+<div id="score"
+style="position:absolute;top:4700px;left:450px;">
+<br><br><br>
+
+<input type=button onClick="Score()" value="Well... How did I do?">
+
+
+</div>
+</body>
+</html>

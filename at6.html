@@ -1,0 +1,380 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body background="images/image6.jpg">
+<center><br><br><br></center>
+
+<div id="main" style="position:absolute;top:170px;left:170px;width:1000px;height:6000px;border-radius: 40px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 7px 1px blue;background-color:white;border:2px solid brown;"
+</div>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:30px auto 0px auto;
+    width:800px;
+    height:55px;
+    padding:0px 20px 0px 20px;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:20px;
+    /*Styling the background with fading effect*/
+     
+    background:#A84040;
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 20px #FFFFFF;
+    border:1px solid #000;     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:10px 0px 10px 0px;
+    display: block;
+    position:relative;
+    text-align:center;
+    margin-right:60px;
+    margin-top:7px;
+    border:none;
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    text-shadow:1px 1px 10px #FFCC99;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FFF;
+    text-shadow:1px 1px 10px #CCC;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.php">Home</a></li>
+<li><a href="ebooks.php">E-books</a></li>
+<li><a href="placements.php">Placement Papers</a></li>
+<li><a href="quiz.php">Quiz</a></li>
+<li><a href="contactus.php">Contact Us</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>   
+
+<style>
+#menbut
+{
+border:1px solid black;background:#A84040;border-radius:10px;box-shadow: inset 1px 1px 5px #FFFFFF;-moz-box-shadow: inset 1px 1px 5px #FFFFFF;-webkit-box-shadow: inset 1px 1px 10px #FFFFFF;width:180px;height:38px;color:black;font-family:Andalus;font-size:23px;text-align:center;text-shadow:1px 1px 10px #FFCC99;
+}
+#menbut:hover
+{
+border:none;background-color:grey;width:180px;height:38px;color:white;font-family:Times New Roman;font-size:20px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 2px 1px red;text-shadow:1px 1px 1px black;
+}
+</style>
+</body>
+<div id="image"
+style="position:absolute;top:100px;left:20px;">
+        <img src="images/quiz.jpg">
+</div>
+
+<HEAD>
+
+<script LANGUAGE="JavaScript">
+
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+
+
+var score = 0;
+ans[1] = "c";
+ans[2] = "c";
+ans[3] = "c";
+ans[4] = "c";
+ans[5] = "e";
+ans[6] = "a";
+ans[7] = "e";
+ans[8] = "c";
+ans[9] = "d";
+ans[10] = "e";
+ans[11] = "d";
+ans[12] = "d";
+ans[13] = "a";
+ans[14] = "e";
+ans[15] = "a";
+ans[16] = "b";
+ans[17] = "c";
+ans[18] = "d";
+ans[19] = "b";
+ans[20] = "d";
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText=" ";
+for(i=1;i<=20;i++){
+answerText=answerText+"\nQuestion :"+i+"        ";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"Correct answer: "+ans[i]+"    ";;
+}
+else{
+answerText=answerText+"Correct! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\n\nYour total score is : "+score+"\n";
+
+alert(answerText);
+
+}
+
+</script>
+</HEAD>
+
+<div id="quiz"
+style="position:absolute;top:100px;left:200px;">
+<font size="4">
+<p class="question">
+1. The greatest number of four digits which is divisible by 15, 25, 40 and 75 is:</p>
+<ul class="answers">
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) &nbsp;&nbsp; 9000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) &nbsp;&nbsp;9400 <br><br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) &nbsp;&nbsp; 9600 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) &nbsp; 9800 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+2. If the sum of two numbers is 55 and the H.C.F. and L.C.M. of these numbers are 5 and 120 respectively, &nbsp;&nbsp;&nbsp;&nbsp;then the sum of the reciprocals of the numbers is equal to:</p>
+<ul class="answers">
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) &nbsp;&nbsp; 55/601 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) &nbsp;&nbsp;601/55 <br><br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) &nbsp;&nbsp; 11/120 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) &nbsp; 120/11 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+3. If a = 0.1039, then the value of (sqrt(4a2-4a+1)+3a) is
+</p>
+<ul class="answers">
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) &nbsp;&nbsp; 0.1039 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) &nbsp;&nbsp;0.2078 <br><br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) &nbsp;&nbsp; 1.1039 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) &nbsp;&nbsp; 2.1039 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+4. The product of two numbers is 9375 and the quotient, when the larger one is divided by the smaller, is <br>&nbsp;&nbsp;&nbsp;&nbsp;15. The sum of the numbers is:</p>
+<ul class="answers">
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) &nbsp;&nbsp; 380&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) &nbsp;&nbsp; 395<br><br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) &nbsp;&nbsp; 400 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) &nbsp;&nbsp; 425 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 5):
+Each of the questions given below consists of a question followed by three<br> statements. You have to study the question and the statements and decide which of the statement(s) is/are necessary to answer the question.<br><br>
+5. What is the two-digit number?<br><br>
+I. The difference between the two-digit number and the number formed by interchanging the digits is 27.<br><br>
+II.The difference between the two digits is 3.<br><br>
+III.The digit at unit's place is less than that at ten's place by 3.<br><br></p>
+<ul class="answers">
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) &nbsp;&nbsp; I and II only<br><br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) &nbsp;&nbsp;I and III only <br><br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) &nbsp;&nbsp;All I, II and III <br><br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) &nbsp;&nbsp;I, and either II or III<br><br>
+<input type=radio name="q5" value="e" onClick="Engine(5, this.value)">d) &nbsp;&nbsp;Even with all I, II and III, answer cannot be give.<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+6.Present ages of Sameer and Anand are in the ratio of 5 : 4 respectively. Three years hence, the ratio of <br>&nbsp;&nbsp;&nbsp;their ages will become 11 : 9 respectively. What is Anand's present age in years?</p>
+<ul class="answers">
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) &nbsp;&nbsp; 24 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) &nbsp;&nbsp;27 <br><br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) &nbsp;40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) &nbsp; Cannot be determined<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 7):
+Each of the questions given below consists of a statement and / or a question and <br>two statements numbered I and II given below it. You have to decide whether the data provided in the statement(s) is / are sufficient to answer the given question. Read the both statements and<br><br>
+Give answer (A) if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question.<br>
+Give answer (B) if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question.<br>
+Give answer (C) if the data either in Statement I or in Statement II alone are sufficient to answer the<br> question.<br>
+Give answer (D) if the data even in both Statements I and II together are not sufficient to answer the <br>question.<br>
+Give answer(E) if the data in both Statements I and II together are necessary to answer the question.<br><br>
+7.What is Sonia's present age?<br><br>
+I. Sonia's present age is five times Deepak's present age.<br><br>
+II.Five years ago her age was twenty-five times Deepak's age at that time.<br><br></p>
+<ul class="answers">
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) &nbsp;&nbsp; I alone sufficient while II alone not sufficient to answer<br><br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) &nbsp;&nbsp;II alone sufficient while I alone not sufficient to answer<br><br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) &nbsp;&nbsp; Either I or II alone sufficient to answer<br><br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) &nbsp; Both I and II are not sufficient to answer<br><br>
+<input type=radio name="q7" value="e" onClick="Engine(7, this.value)">d) &nbsp; Both I and II are necessary to answer<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+8. If 3^(x - y) = 27 and 3^(x + y) = 243, then x is equal to:</p>
+<ul class="answers">
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) &nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) &nbsp;&nbsp; 2<br><br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) &nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) &nbsp; 6 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+9. Some articles were bought at 6 articles for Rs. 5 and sold at 5 articles for Rs. 6. Gain percent is:</p>
+<ul class="answers">
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) &nbsp;&nbsp; 30%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) &nbsp;&nbsp; 33 1/3%<br><br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) &nbsp;&nbsp; 35%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) &nbsp;44% <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 10):
+Each of the questions given below consists of a statement and / or a question and two statements numbered I and II given below it. You have to decide whether the data provided in the statement(s) is / are sufficient to answer the given question. Read the both statements and<br><br>
+Give answer (A) if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question.<br><br>
+Give answer (B) if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question.<br><br>
+Give answer (C) if the data either in Statement I or in Statement II alone are sufficient to answer the <br>question.<br><br>
+Give answer (D) if the data even in both Statements I and II together are not sufficient to answer the <br>question.<br><br>
+Give answer(E) if the data in both Statements I and II together are necessary to answer the question.<br><br>
+10. What is the length of a running train?<br><br>
+I. The train crosses a man in 9 seconds.<br><br>
+II.The train crosses a 240 metre long platform in 24 seconds.<br><br>
+</p>
+<ul class="answers">
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) &nbsp;&nbsp;   I alone sufficient while II alone not sufficient to answer <br><br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) &nbsp;&nbsp; II alone sufficient while I alone not sufficient to answer       <br><br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) &nbsp;&nbsp;    Either I or II alone sufficient to answer<br><br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) &nbsp;    Both I and II are not sufficient to answer       <p>
+<input type=radio name="q10" value="e" onClick="Engine(10, this.value)">d) &nbsp;  Both I and II are necessary to answer   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 11):
+Each of these questions is followed by three statements. You have to study the question and all the three statements given to decide whether any information provided in the statement(s) is redundant and can be dispensed with while answering the given question.<br><br>
+11. At what time will the train reach city X from city Y?<br><br>
+I. The train crosses another train of equal length of 200 metres and running in opposite directions in 15 seconds.<br><br>
+II.The train leaves city Y and 7.15 a.m. for city X situated at a distance of 558 km.<br><br>
+III.The 200 metres long train crosses a signal pole in 10 seconds.</p>
+<ul class="answers">
+<input type=radio name="q11" value="a" onClick="Engine(11, this.value)">a) &nbsp;&nbsp;I only <br><br>
+<input type=radio name="q11" value="b" onClick="Engine(11, this.value)">b) &nbsp;&nbsp;II only  <br><br>
+<input type=radio name="q11" value="c" onClick="Engine(11, this.value)">c) &nbsp;&nbsp;III only <br><br>
+<input type=radio name="q11" value="d" onClick="Engine(11, this.value)">d) &nbsp;&nbsp;II and III only <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 12):
+Each of the questions given below consists of a question followed by three statements. You have to study the question and the statements and decide which of the statement(s) is/are necessary to answer the question.<br><br>
+12. What is the speed of the boat in still water?<br><br>
+I. The speed downstream is 12 kmph.<br><br>
+II.The speed upstream is 4 kmph.<br><br>
+III.In a to and fro journey between two points, the average speed of the boat was 6 kmph.</p>
+<ul class="answers">
+<input type=radio name="q12" value="a" onClick="Engine(12, this.value)">a) &nbsp;&nbsp; I and II only <br><br>
+<input type=radio name="q12" value="b" onClick="Engine(12, this.value)">b) &nbsp;&nbsp; All I, II and III<br><br>
+<input type=radio name="q12" value="c" onClick="Engine(12, this.value)">c) &nbsp;&nbsp; III, and either I or II <br><br>
+<input type=radio name="q12" value="d" onClick="Engine(12, this.value)">d) &nbsp; Any two of the three <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+13.  Mr. Thomas invested an amount of Rs. 13,900 divided in two different schemes A and B at the simple interest rate of 14% p.a. and 11% p.a. respectively. If the total amount of simple interest earned in 2 years be Rs. 3508, what was the amount invested in Scheme B?</p>
+<ul class="answers">
+<input type=radio name="q13" value="a" onClick="Engine(13, this.value)">a) &nbsp;&nbsp; Rs. 6400 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="b" onClick="Engine(13, this.value)">b) &nbsp;&nbsp;Rs. 6500 <br><br>
+<input type=radio name="q13" value="c" onClick="Engine(13, this.value)">c) &nbsp;&nbsp; Rs. 7200 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="d" onClick="Engine(13, this.value)">d) &nbsp; Rs. 7500 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 14):
+Each of the questions given below consists of a question followed by three statements. You have to study the question and the statements and decide which of the statement(s) is/are necessary to answer the question.<br><br>
+14.What is the principal sum?<br><br>
+I.The sum amounts to Rs. 690 in 3 years at S.I.<br><br>
+II.The sum amounts to Rs. 750 in 5 years at S.I.<br><br>
+III.The rate of interest is 5% p.a.<br><br></p>
+<ul class="answers">
+<input type=radio name="q14" value="a" onClick="Engine(14, this.value)">a)&nbsp;&nbsp;I and III only<br><br>
+<input type=radio name="q14" value="b" onClick="Engine(14, this.value)">b)&nbsp;&nbsp;II and III only<br><br>
+<input type=radio name="q14" value="c" onClick="Engine(14, this.value)">c)&nbsp;&nbsp;I and II only<br><br>
+<input type=radio name="q14" value="d" onClick="Engine(14, this.value)">d)&nbsp;&nbsp;I and III only, or II and III only <br><br>
+<input type=radio name="q14" value="e" onClick="Engine(14, this.value)">e)&nbsp;&nbsp;Any two of the three
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+15.  66 cubic centimetres of silver is drawn into a wire 1 mm in diameter. The length of the wire in metres will be: </p>
+<ul class="answers">
+<input type=radio name="q15" value="a" onClick="Engine(15, this.value)">a) &nbsp;&nbsp; 84 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="b" onClick="Engine(15, this.value)">b) &nbsp;&nbsp;90 <br><br>
+<input type=radio name="q15" value="c" onClick="Engine(15, this.value)">c) &nbsp;&nbsp; 168 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="d" onClick="Engine(15, this.value)">d) &nbsp; 336 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+16. How many times in a day, are the hands of a clock in straight line but opposite in direction? </p>
+<ul class="answers">
+<input type=radio name="q16" value="a" onClick="Engine(16, this.value)">a) &nbsp;&nbsp; 20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="b" onClick="Engine(16, this.value)">b) &nbsp;&nbsp;22<br><br>
+<input type=radio name="q16" value="c" onClick="Engine(16, this.value)">c) &nbsp;&nbsp; 24 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="d" onClick="Engine(16, this.value)">d) &nbsp; 48<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+17. The cost price of a Rs. 100 stock at 4 discount, when brokerage is 1/4% is:</p>
+<ul class="answers">
+<input type=radio name="q17" value="a" onClick="Engine(17, this.value)">a) &nbsp;&nbsp;Rs. 95.75 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="b" onClick="Engine(17, this.value)">b) &nbsp;&nbsp;Rs. 96 <br><br>
+<input type=radio name="q17" value="c" onClick="Engine(17, this.value)">c) &nbsp;&nbsp;Rs. 96.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="d" onClick="Engine(17, this.value)">d) &nbsp; Rs. 104.25 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+18.  From a group of 7 men and 6 women, five persons are to be selected to form a committee so that atleast <br>3 men are there on the committee. In how many ways can it be done?</p>
+<ul class="answers">
+<input type=radio name="q18" value="a" onClick="Engine(18, this.value)">a) &nbsp;&nbsp; 564 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="b" onClick="Engine(18, this.value)">b) &nbsp;&nbsp;645 <br><br>
+<input type=radio name="q18" value="c" onClick="Engine(18, this.value)">c) &nbsp;&nbsp; 735&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="d" onClick="Engine(18, this.value)">d) &nbsp; 756 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+19. The true discount on a bill due 9 months hence at 16% per annum is Rs. 189. The amount of the bill is:</p>
+<ul class="answers">
+<input type=radio name="q19" value="a" onClick="Engine(19, this.value)">a) &nbsp;&nbsp; Rs. 1386 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="b" onClick="Engine(19, this.value)">b) &nbsp;&nbsp;Rs. 1764<br><br>
+<input type=radio name="q19" value="c" onClick="Engine(19, this.value)">c) &nbsp;&nbsp; Rs. 1575 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="d" onClick="Engine(19, this.value)">d) &nbsp; Rs. 2268 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 20):
+Find the odd man out.<br><br>
+20. 41, 43, 47, 53, 61, 71, 73, 81</p>
+<ul class="answers">
+<input type=radio name="q20" value="a" onClick="Engine(20, this.value)">a) &nbsp;&nbsp; 61 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="b" onClick="Engine(20, this.value)">b) &nbsp;&nbsp;71 <br><br>
+<input type=radio name="q20" value="c" onClick="Engine(20, this.value)">c) &nbsp;&nbsp; 73 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="d" onClick="Engine(20, this.value)">d) &nbsp; 81<p>
+</ul>
+
+</font>
+</div>
+<div id="score"
+style="position:absolute;top:5850px;left:450px;">
+<br><br><br>
+
+<input type=button onClick="Score()" value="Well... How did I do?">
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body background="images/image6.jpg">
+<center><br><br><br></center>
+
+<div id="main" style="position:absolute;top:170px;left:170px;width:1000px;height:6400px;border-radius: 40px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 7px 1px blue;background-color:white;border:2px solid brown;"
+</div>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:30px auto 0px auto;
+    width:800px;
+    height:55px;
+    padding:0px 20px 0px 20px;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:20px;
+    /*Styling the background with fading effect*/
+     
+    background:#A84040;
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 20px #FFFFFF;
+    border:1px solid #000;     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:10px 10px 4px 10px;
+    display: block;
+    position:relative;
+    text-align:center;
+    margin-right:60px;
+    margin-top:7px;
+    border:none;
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    text-shadow:1px 1px 10px #FFCC99;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FFF;
+    text-shadow:1px 1px 10px #CCC;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.php">Home</a></li>
+<li><a href="ebooks.php">E-books</a></li>
+<li><a href="placements.php">Placement Papers</a></li>
+<li><a href="quiz.php">Quiz</a></li>
+<li><a href="contactus.php">Contact Us</a></li>
+</ul>   
+
+<style>
+#menbut
+{
+border:1px solid black;background:#A84040;border-radius:10px;box-shadow: inset 1px 1px 5px #FFFFFF;-moz-box-shadow: inset 1px 1px 5px #FFFFFF;-webkit-box-shadow: inset 1px 1px 10px #FFFFFF;width:180px;height:38px;color:black;font-family:Andalus;font-size:23px;text-align:center;text-shadow:1px 1px 10px #FFCC99;
+}
+#menbut:hover
+{
+border:none;background-color:grey;width:180px;height:38px;color:white;font-family:Times New Roman;font-size:20px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 2px 1px red;text-shadow:1px 1px 1px black;
+}
+</style>
+</body>
+<div id="image"
+style="position:absolute;top:100px;left:20px;">
+        <img src="images/quiz.jpg">
+</div>
+
+<HEAD>
+
+<script LANGUAGE="JavaScript">
+
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+
+
+var score = 0;
+ans[1] = "a";
+ans[2] = "b";
+ans[3] = "b";
+ans[4] = "a";
+ans[5] = "d";
+ans[6] = "a";
+ans[7] = "b";
+ans[8] = "d";
+ans[9] = "a";
+ans[10] = "b";
+ans[11] = "c";
+ans[12] = "b";
+ans[13] = "c";
+ans[14] = "c";
+ans[15] = "d";
+ans[16] = "a";
+ans[17] = "b";
+ans[18] = "a";
+ans[19] = "b";
+ans[20] = "c";
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText=" ";
+for(i=1;i<=20;i++){
+answerText=answerText+"\nQuestion :"+i+"        ";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"Correct answer: "+ans[i]+"    ";;
+}
+else{
+answerText=answerText+"Correct! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\n\nYour total score is : "+score+"\n";
+
+alert(answerText);
+
+}
+
+</script>
+</HEAD>
+
+<div id="quiz"
+style="position:absolute;top:100px;left:200px;">
+<font size="4">
+<p class="question">
+Direction (for Q.Nos. 1 - 2):
+Read the each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is 'D'. (Ignore the errors of punctuation, if any).<br><br>
+1.  (solve as per the direction given above)</p>
+<ul class="answers">
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) &nbsp;&nbsp;Looking back, I find that among the many impressions ofthe people of India,   <br><br>
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) &nbsp;&nbsp;absorbed while I lived among them,  <br><br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) &nbsp;&nbsp;are their reverence for great men and women.   <br><br>
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) &nbsp;&nbsp; No error   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+2.  (solve as per the direction given above)</p>
+<ul class="answers">
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) &nbsp;&nbsp;In management, as you rise higher,    <br><br>
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) &nbsp;&nbsp; the problems you face becomemore and more unstructured and you can't just fall back on   <br><br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) &nbsp;&nbsp;the tools you had been   <br><br>
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) &nbsp;&nbsp;No error      <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.Nos. 3 - 5):
+Read the each sentence to find out whether there is any grammatical error in it. The error, if any will be in one part of the sentence. The letter of that part is the answer. If there is no error, the answer is 'E'. (Ignore the errors of punctuation, if any).<br><br>
+3.   (solve as per the direction given above)</p>
+<ul class="answers">
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) &nbsp;&nbsp;I cannot  <br><br>
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) &nbsp;&nbsp;make from   <br><br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) &nbsp;&nbsp;what you are saying   <br><br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) &nbsp;&nbsp;about him.<br><br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) &nbsp;&nbsp;No error.<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+4.   (solve as per the direction given above)</p>
+<ul class="answers">
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) &nbsp;&nbsp;Even after worked in the office   <br><br>
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) &nbsp;&nbsp;for as many as fiteen years,   <br><br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) &nbsp;&nbsp;he still does not understand   <br><br>
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) &nbsp;&nbsp;the basic objectives of the work.<br><br>
+<input type=radio name="q4" value="e" onClick="Engine(4, this.value)">e) &nbsp;&nbsp;No error. <p> 
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+5.   (solve as per the direction given above)</p>
+<ul class="answers">
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a)&nbsp;&nbsp;Your machine would not have   <br><br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b)&nbsp;&nbsp;given you so much trouble   <br><br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c)&nbsp;&nbsp;if you had   <br><br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d)&nbsp;&nbsp;maintained it proper.  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.Nos. 6 - 8):
+In each of the sentences given below a word is printed in bold. Below it four choices are given. Pick up the one which is most nearly the same in meaning as the word printer in bold <br>and can replaces it without altering the meaning of the sentence.<br><br>
+6.   She has an insatiable love for music.</p>
+<ul class="answers">
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a)&nbsp;&nbsp;unsatisfiable   <br><br>
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b)&nbsp;&nbsp;unchanging   <br><br> 
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c)&nbsp;&nbsp;irreconcilable   <br><br>
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d)&nbsp;&nbsp;undesirable<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+7.  Traffic being what it is, it is lamentable that our roads are unable to take the load.</p>
+<ul class="answers">
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a)&nbsp;&nbsp;unpardonable  <br><br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b)&nbsp;&nbsp;deplorable  <br><br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c)&nbsp;&nbsp;inexcusable  <br><br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d)&nbsp;&nbsp;terrible  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+8.   Catching snakes can be hazardous for people untrained in the art.</p>
+<ul class="answers">
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a)&nbsp;&nbsp;tricky  <br><br>
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b)&nbsp;&nbsp;harmful <br><br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c)&nbsp;&nbsp;difficult  <br><br>
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d)&nbsp;&nbsp;dangerous <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.Nos. 9 - 10):
+In the following questions choose the word which is the exact OPPOSITE of <br>the given words.<br><br>
+9.   FLAGITIOUS</p>
+<ul class="answers">
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a)&nbsp;&nbsp;innocent <br><br>
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b)&nbsp;&nbsp;vapid  <br><br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c)&nbsp;&nbsp;ignorant <br><br> 
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d)&nbsp;&nbsp;frivolous <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+10.   IMPASSE</p>
+<ul class="answers">
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a)&nbsp;&nbsp;resurgence  <br><br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b)&nbsp;&nbsp;breakthrough  <br><br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c)&nbsp;&nbsp;continuation  <br><br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d)&nbsp;&nbsp;combination <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.Nos. 11 - 14):
+Pick out the most effective word(s) from the given words to fill in the blank <br>to make the sentence meaningfully complete.<br><br>
+11.   The grapes are now ...... enough to be picked.</p>
+<ul class="answers">
+<input type=radio name="q11" value="a" onClick="Engine(11, this.value)">a)&nbsp;&nbsp;ready  <br><br>
+<input type=radio name="q11" value="b" onClick="Engine(11, this.value)">b)&nbsp;&nbsp; mature <br><br>
+<input type=radio name="q11" value="c" onClick="Engine(11, this.value)">c)&nbsp;&nbsp;ripe  <br><br>
+<input type=radio name="q11" value="d" onClick="Engine(11, this.value)">d)&nbsp;&nbsp;advanced  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+12.  The paths of glory lead ...... to the grave.</p>
+<ul class="answers">
+<input type=radio name="q12" value="a" onClick="Engine(12, this.value)">a)&nbsp;&nbsp;straight  <br><br>
+<input type=radio name="q12" value="b" onClick="Engine(12, this.value)">b)&nbsp;&nbsp;but  <br><br>
+<input type=radio name="q12" value="c" onClick="Engine(12, this.value)">c)&nbsp;&nbsp;in  <br><br>
+<input type=radio name="q12" value="d" onClick="Engine(12, this.value)">d)&nbsp;&nbsp;directly  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+13.   He passed the examination in the first class because he ......</p>
+<ul class="answers">
+<input type=radio name="q13" value="a" onClick="Engine(13, this.value)">a)&nbsp;&nbsp;was hard working for it  <br><br> 
+<input type=radio name="q13" value="b" onClick="Engine(13, this.value)">b)&nbsp;&nbsp;worked hardly for it  <br><br>
+<input type=radio name="q13" value="c" onClick="Engine(13, this.value)">c)&nbsp;&nbsp;had worked hard for it  <br><br>
+<input type=radio name="q13" value="d" onClick="Engine(13, this.value)">d)&nbsp;&nbsp;was working hard for it   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+14.   The English schemed to continue their rule in India by playing off one community ...... the other.</p>
+<ul class="answers">
+<input type=radio name="q14" value="a" onClick="Engine(14, this.value)">a)&nbsp;&nbsp;before  <br><br>
+<input type=radio name="q14" value="b" onClick="Engine(14, this.value)">b)&nbsp;&nbsp;upon  <br><br>
+<input type=radio name="q14" value="c" onClick="Engine(14, this.value)">c)&nbsp;&nbsp;against  <br><br>
+<input type=radio name="q14" value="d" onClick="Engine(14, this.value)">d)&nbsp;&nbsp;with   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 15):
+In each question, an incomplete statement (Stem) followed by fillers is given. Pick out the best one which can complete incomplete stem correctly and meaningfully.<br><br>
+15.   In order to help the company attain its goal of enhancing profit, all the employees ......</p>
+<ul class="answers">
+<input type=radio name="q15" value="a" onClick="Engine(15, this.value)">a)&nbsp;&nbsp;urged the management to grant paid leave  <br><br>
+<input type=radio name="q15" value="b" onClick="Engine(15, this.value)">b)&nbsp;&nbsp;appealed the management to implement new welfare schemes  <br><br>
+<input type=radio name="q15" value="c" onClick="Engine(15, this.value)">c)&nbsp;&nbsp; voluntarily offered to work overtime with lucrative compensation <br><br>
+<input type=radio name="q15" value="d" onClick="Engine(15, this.value)">d)&nbsp;&nbsp; voluntarily offered to render additional services in lieu of nothing<br><br>
+<input type=radio name="q15" value="e" onClick="Engine(15, this.value)">e)&nbsp;&nbsp;decided to enhance production at the cost of quality of the product <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.Nos. 16 - 17):
+In questions below, each passage consist of six sentences. The first and sixth sentence are given in the begining. The middle four sentences in each have been removed and jumbled up. These are labelled as P, Q, R and S. Find out the proper order for the four sentences.<br><br>
+16.   S1:	Ants eat worms, centipedes and spiders.<br><br>
+P :	They are usually much quicker than the ant itself.<br><br>
+Q :	Nevertheless, these animals do not make easy game for ants.<br><br>
+R :	Besides, they have an extraordinary number of ways of escaping.<br><br>
+S :	They also eat larvae and insect adults such as flies, moths and spring tails.<br><br>
+S6:	Some jump, and some give out a pungent repellent substance.<br><br>
+The Proper sequence should be:</p>
+<ul class="answers">
+<input type=radio name="q16" value="a" onClick="Engine(16, this.value)">a)&nbsp;&nbsp;SQPR  <br><br>
+<input type=radio name="q16" value="b" onClick="Engine(16, this.value)">b)&nbsp;&nbsp;SPRQ <br><br>
+<input type=radio name="q16" value="c" onClick="Engine(16, this.value)">c)&nbsp;&nbsp;SQRP <br><br>
+<input type=radio name="q16" value="d" onClick="Engine(16, this.value)">d)&nbsp;&nbsp;SRQP  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+17.   S1:	Once upon atime there lived three young men in a certain town of Hindustan.<br><br>
+P :	All the people of the neighbourhood were mortally afraid of them.<br><br>
+Q :	They were so powerful that they could catch growing lions and tear them to pieces.<br><br>
+R :	Someone told them that they would become immortal if they killed Death.<br><br>
+S :	The young men believed themselves to be very good friends.<br><br>
+S6:	All of them set out in search of their foe called Death.<br><br>
+The Proper sequence should be:</p>
+<ul class="answers">
+<input type=radio name="q17" value="a" onClick="Engine(17, this.value)">a)&nbsp;&nbsp;QPRS  <br><br>
+<input type=radio name="q17" value="b" onClick="Engine(17, this.value)">b)&nbsp;&nbsp;SQPR  <br><br>
+<input type=radio name="q17" value="c" onClick="Engine(17, this.value)">c)&nbsp;&nbsp;RSQP  <br><br>
+<input type=radio name="q17" value="d" onClick="Engine(17, this.value)">d)&nbsp;&nbsp;SRPQ   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.Nos. 18 - 19):
+In the following questions four alternatives are given for the idiom/phrase italicised and underlined in the sentence. Choose the alternative which best expresses the meaning of idiom/phrase.<br><br
+18.   Why do you wish to tread on the toes?</p>
+<ul class="answers">
+<input type=radio name="q18" value="a" onClick="Engine(18, this.value)">a)&nbsp;&nbsp;To give offence to them  <br><br>
+<input type=radio name="q18" value="b" onClick="Engine(18, this.value)">b)&nbsp;&nbsp;To follow them grudgingly  <br><br>
+<input type=radio name="q18" value="c" onClick="Engine(18, this.value)">c)&nbsp;&nbsp;To treat them indifferently  <br><br>
+<input type=radio name="q18" value="d" onClick="Engine(18, this.value)">d)&nbsp;&nbsp;To be kicked by them  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+19.   In spite of the immense pressure exerted by the militants, the Government has decided not to give in.</p>
+<ul class="answers">
+<input type=radio name="q19" value="a" onClick="Engine(19, this.value)">a)&nbsp;&nbsp;accede  <br><br>
+<input type=radio name="q19" value="b" onClick="Engine(19, this.value)">b)&nbsp;&nbsp;yield <br><br>
+<input type=radio name="q19" value="c" onClick="Engine(19, this.value)">c)&nbsp;&nbsp;oblige <br><br>
+<input type=radio name="q19" value="d" onClick="Engine(19, this.value)">d)&nbsp;&nbsp;confirm   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 20):
+In the questions below the sentences have been given in Direct/Indirect speech. From the given alternatives, choose the one which best expresses the given sentence in Indirect/Direct speech.<br><br>
+20.   Nita ordered her servant to bring her cup of tea.</p>
+<ul class="answers">
+<input type=radio name="q20" value="a" onClick="Engine(20, this.value)">a)&nbsp;&nbsp;Nita told her servant, "Bring a cup of tea."  <br><br>  
+<input type=radio name="q20" value="b" onClick="Engine(20, this.value)">b)&nbsp;&nbsp;Nita said, "Bring me a cup of tea."  <br><br>
+<input type=radio name="q20" value="c" onClick="Engine(20, this.value)">c)&nbsp;&nbsp;Nita said to her servant, "Bring me a cup of tea."  <br><br>
+<input type=radio name="q20" value="d" onClick="Engine(20, this.value)">d)&nbsp;&nbsp;Nita told her servant, "Bring her that cup of tea."   <p>
+</ul>
+
+</font>
+</div>
+<div id="score"
+style="position:absolute;top:6200px;left:450px;">
+<br><br><br>
+
+<input type=button onClick="Score()" value="Well... How did I do?">
+
+
+</div>
+</body>
+</html>

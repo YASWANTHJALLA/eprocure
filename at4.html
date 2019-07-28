@@ -1,0 +1,338 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<body background="images/image6.jpg">
+<center><br><br><br></center>
+
+<div id="main" style="position:absolute;top:170px;left:170px;width:1000px;height:3750px;border-radius: 40px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 7px 1px blue;background-color:white;border:2px solid brown;"
+</div>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:30px auto 0px auto;
+    width:800px;
+    height:55px;
+    padding:0px 20px 0px 20px;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:20px;
+    /*Styling the background with fading effect*/
+     
+    background:#A84040;
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 20px #FFFFFF;
+    border:1px solid #000;     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:10px 0px 10px 0px;
+    display: block;
+    position:relative;
+    text-align:center;
+    margin-right:60px;
+    margin-top:7px;
+    border:none;
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    text-shadow:1px 1px 10px #FFCC99;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FFF;
+    text-shadow:1px 1px 10px #CCC;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.php">Home</a></li>
+<li><a href="ebooks.php">E-books</a></li>
+<li><a href="placements.php">Placement Papers</a></li>
+<li><a href="quiz.php">Quiz</a></li>
+<li><a href="contactus.php">Contact Us</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>   
+
+<style>
+#menbut
+{
+border:1px solid black;background:#A84040;border-radius:10px;box-shadow: inset 1px 1px 5px #FFFFFF;-moz-box-shadow: inset 1px 1px 5px #FFFFFF;-webkit-box-shadow: inset 1px 1px 10px #FFFFFF;width:180px;height:38px;color:black;font-family:Andalus;font-size:23px;text-align:center;text-shadow:1px 1px 10px #FFCC99;
+}
+#menbut:hover
+{
+border:none;background-color:grey;width:180px;height:38px;color:white;font-family:Times New Roman;font-size:20px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 2px 1px red;text-shadow:1px 1px 1px black;
+}
+</style>
+</body>
+<div id="image"
+style="position:absolute;top:100px;left:20px;">
+        <img src="images/quiz.jpg">
+</div>
+
+<HEAD>
+
+<script LANGUAGE="JavaScript">
+
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+
+
+var score = 0;
+ans[1] = "a";
+ans[2] = "a";
+ans[3] = "d";
+ans[4] = "b";
+ans[5] = "c";
+ans[6] = "d";
+ans[7] = "b";
+ans[8] = "c";
+ans[9] = "a";
+ans[10] = "c";
+ans[11] = "a";
+ans[12] = "b";
+ans[13] = "a";
+ans[14] = "d";
+ans[15] = "c";
+ans[16] = "c";
+ans[17] = "d";
+ans[18] = "b";
+ans[19] = "c";
+ans[20] = "c";
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText=" ";
+for(i=1;i<=20;i++){
+answerText=answerText+"\nQuestion :"+i+"        ";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"Correct answer: "+ans[i]+"    ";;
+}
+else{
+answerText=answerText+"Correct! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\n\nYour total score is : "+score+"\n";
+
+alert(answerText);
+
+}
+
+</script>
+</HEAD>
+
+<div id="quiz"
+style="position:absolute;top:100px;left:200px;">
+<font size="4">
+<p class="question">
+1. A fires 5 shots to B's 3 but A kills only once in 3 shots while B kills once in 2 shots. When B has <br>missed 27 times, A has killed:</p>
+<ul class="answers">
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) &nbsp;&nbsp;30 birds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) &nbsp;&nbsp;60 birds<br><br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) &nbsp;&nbsp;72 birds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) &nbsp;90 birds<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+2. Six years ago, the ratio of the ages of Kunal and Sagar was 6 : 5. Four years hence, the ratio of their <br>ages will be 11 : 10. What is Sagar's age at present?</p>
+<ul class="answers">
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) &nbsp;&nbsp;16 years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) &nbsp;&nbsp;18 years<br><br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) &nbsp;&nbsp;20 years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) &nbsp;Cannot be determined<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+3. Q is as much younger than R as he is older than T. If the sum of the ages of R and T is 50 years, <br>what is definitely the difference between R and Q's age?</p>
+<ul class="answers">
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) &nbsp;&nbsp;1 year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) &nbsp;&nbsp;2 years<br><br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) &nbsp;&nbsp;25 years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) &nbsp;&nbsp;Data inadequate<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+4. &nbsp;&nbsp;(1/(1+(x^(b-a))+(x^(c-a))))&nbsp;&nbsp;+&nbsp;&nbsp;(1/(1+(x^(a-b))+(x^(c-b))))&nbsp;&nbsp;+&nbsp;&nbsp;(1/(1+(x^(b-c))+(x^(a-c))))</p>
+<ul class="answers">
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) &nbsp;&nbsp;1<br><br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) &nbsp;&nbsp; x^(a-b-c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) &nbsp;&nbsp;None of these<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+5.&nbsp;&nbsp;(1/(1 + (a^(n - m))))&nbsp;&nbsp;+&nbsp;&nbsp;(1/(1 + (a^(m - n))))	= ?
+	
+</p>
+<ul class="answers">
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) &nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) &nbsp;&nbsp;1/2 <br><br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) &nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) &nbsp; a^(m+n) <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+6. Simran started a software business by investing Rs. 50,000. After six months, Nanda joined her with <br>a capital of Rs. 80,000. After 3 years, they earned a profit of Rs. 24,500. What was Simran's share in<br> the profit?</p>
+<ul class="answers">
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) &nbsp;&nbsp; Rs. 9,423&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) &nbsp;&nbsp;Rs. 10,250 <br><br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) &nbsp;Rs. 12,500 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) &nbsp; Rs. 10,500 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+7.A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do <br>the work if he is assisted by B and C on every third day?</p>
+<ul class="answers">
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) &nbsp;&nbsp; 12 days&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) &nbsp;&nbsp;15 days<br><br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) &nbsp;&nbsp;16 days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) &nbsp; 18 days <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+8. Robert is travelling on his cycle and has calculated to reach point A at 2 P.M. if he travels at 10 kmph,<br> he will reach there at 12 noon if he travels at 15 kmph. At what speed must he travel to reach A at 1 P.M.?</p>
+<ul class="answers">
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) &nbsp;&nbsp; 8 kmph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) &nbsp;&nbsp; 11 kmph<br><br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) &nbsp;&nbsp; 12 kmph&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) &nbsp; 14 kmph <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+9. A man rows to a place 48 km distant and come back in 14 hours. He finds that he can row 4 km with <br> the stream in the same time as 3 km against the stream. The rate of the stream is:</p>
+<ul class="answers">
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) &nbsp;&nbsp; 1 km/hr &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) &nbsp;&nbsp;1.5 km/hr <br><br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) &nbsp;&nbsp; 2 km/hr &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) &nbsp; 2.5 km/hr <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+10.In what ratio must a grocer mix two varieties of pulses costing Rs. 15 and Rs. 20 per kg respectively so<br> as to get a mixture worth Rs. 16.50 kg? </p>
+<ul class="answers">
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) &nbsp;&nbsp; 3 : 7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) &nbsp;&nbsp;5 : 7 <br><br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) &nbsp;&nbsp; 7 : 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) &nbsp; 7 : 5 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+11. If log a/b + logb/a	= log (a + b), then:</p>
+<ul class="answers">
+<input type=radio name="q11" value="a" onClick="Engine(11, this.value)">a) &nbsp;&nbsp; a + b = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q11" value="b" onClick="Engine(11, this.value)">b) &nbsp;&nbsp;a - b = 1 <br><br>
+<input type=radio name="q11" value="c" onClick="Engine(11, this.value)">c) &nbsp;&nbsp; a = b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q11" value="d" onClick="Engine(11, this.value)">d) &nbsp; a2 - b2 = 1 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+12. In a race of 200 m, A can beat B by 31 m and C by 18 m. In a race of 350 m, C will beat B by:</p>
+<ul class="answers">
+<input type=radio name="q12" value="a" onClick="Engine(12, this.value)">a) &nbsp;&nbsp; 22.75 m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="b" onClick="Engine(12, this.value)">b) &nbsp;&nbsp;25 m <br><br>
+<input type=radio name="q12" value="c" onClick="Engine(12, this.value)">c) &nbsp;&nbsp; 19.5 m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="d" onClick="Engine(12, this.value)">d) &nbsp; 7 4/7 m <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+13. If 6th March, 2005 is Monday, what was the day of the week on 6th March, 2004?</p>
+<ul class="answers">
+<input type=radio name="q13" value="a" onClick="Engine(13, this.value)">a) &nbsp;&nbsp; Sunday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="b" onClick="Engine(13, this.value)">b) &nbsp;&nbsp;Saturday <br><br>
+<input type=radio name="q13" value="c" onClick="Engine(13, this.value)">c) &nbsp;&nbsp; Tuesday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="d" onClick="Engine(13, this.value)">d) &nbsp; Wednesday<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+14. An accurate clock shows 8 o'clock in the morning. Through how may degrees will the hour hand <br>rotate when the clock shows 2 o'clock in the afternoon?</p>
+<ul class="answers">
+<input type=radio name="q14" value="a" onClick="Engine(14, this.value)">a) &nbsp;&nbsp; 144º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q14" value="b" onClick="Engine(14, this.value)">b) &nbsp;&nbsp;150º<br><br>
+<input type=radio name="q14" value="c" onClick="Engine(14, this.value)">c) &nbsp;&nbsp; 168º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q14" value="d" onClick="Engine(14, this.value)">d) &nbsp; 180º<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+15.A clock is started at noon. By 10 minutes past 5, the hour hand has turned through: </p>
+<ul class="answers">
+<input type=radio name="q15" value="a" onClick="Engine(15, this.value)">a) &nbsp;&nbsp; 145º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="b" onClick="Engine(15, this.value)">b) &nbsp;&nbsp;150º<br><br>
+<input type=radio name="q15" value="c" onClick="Engine(15, this.value)">c) &nbsp;&nbsp; 155º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="d" onClick="Engine(15, this.value)">d) &nbsp; 160º<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+16.The market value of a 10.5% stock, in which an income of Rs. 756 is derived by investing Rs. 9000, brokerage being 1/4 % is </p>
+<ul class="answers">
+<input type=radio name="q16" value="a" onClick="Engine(16, this.value)">a) &nbsp;&nbsp; Rs. 108.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="b" onClick="Engine(16, this.value)">b) &nbsp;&nbsp;Rs. 112.20<br><br>
+<input type=radio name="q16" value="c" onClick="Engine(16, this.value)">c) &nbsp;&nbsp; Rs. 124.75&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="d" onClick="Engine(16, this.value)">d) &nbsp; Rs. 125.25 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+17. From a pack of 52 cards, two cards are drawn together at random. What is the probability of both <br>the cards being kings?</p>
+<ul class="answers">
+<input type=radio name="q17" value="a" onClick="Engine(17, this.value)">a) &nbsp;&nbsp; 1/15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="b" onClick="Engine(17, this.value)">b) &nbsp;&nbsp;25/57 <br><br>
+<input type=radio name="q17" value="c" onClick="Engine(17, this.value)">c) &nbsp;&nbsp; 35/256 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="d" onClick="Engine(17, this.value)">d) &nbsp; 1/221 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+18.One card is drawn at random from a pack of 52 cards. What is the probability that the card drawn is <br>a face card (Jack, Queen and King only)?</p>
+<ul class="answers">
+<input type=radio name="q18" value="a" onClick="Engine(18, this.value)">a) &nbsp;&nbsp; 1/13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="b" onClick="Engine(18, this.value)">b) &nbsp;&nbsp;3/13 <br><br>
+<input type=radio name="q18" value="c" onClick="Engine(18, this.value)">c) &nbsp;&nbsp; 1/4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="d" onClick="Engine(18, this.value)">d) &nbsp; 9/52 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+19. The true discount on Rs. 2562 due 4 months hence is Rs. 122. The rate percent is:</p>
+<ul class="answers">
+<input type=radio name="q19" value="a" onClick="Engine(19, this.value)">a) &nbsp;&nbsp; 12% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="b" onClick="Engine(19, this.value)">b) &nbsp;&nbsp;13 1/3 % <br><br>
+<input type=radio name="q19" value="c" onClick="Engine(19, this.value)">c) &nbsp;&nbsp; 15% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="d" onClick="Engine(19, this.value)">d) &nbsp; 14% <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 20):
+Find out the wrong number in the given sequence of numbers.<br><br>
+20.22, 33, 66, 99, 121, 279, 594</p>
+<ul class="answers">
+<input type=radio name="q20" value="a" onClick="Engine(20, this.value)">a) &nbsp;&nbsp; 33 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="b" onClick="Engine(20, this.value)">b) &nbsp;&nbsp;121 <br><br>
+<input type=radio name="q20" value="c" onClick="Engine(20, this.value)">c) &nbsp;&nbsp; 279 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="d" onClick="Engine(20, this.value)">d) &nbsp; 594 <p>
+</ul>
+
+</font>
+</div>
+<div id="score"
+style="position:absolute;top:3550px;left:450px;">
+<br><br><br>
+
+<input type=button onClick="Score()" value="Well... How did I do?">
+
+
+</div>
+</body>
+</html>

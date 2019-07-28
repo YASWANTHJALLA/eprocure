@@ -1,0 +1,348 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body background="images/image6.jpg">
+<center><br><br><br></center>
+
+<div id="main" style="position:absolute;top:170px;left:170px;width:1000px;height:4000px;border-radius: 40px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 7px 1px blue;background-color:white;border:2px solid brown;"
+</div>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:30px auto 0px auto;
+    width:800px;
+    height:55px;
+    padding:0px 20px 0px 20px;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:20px;
+    /*Styling the background with fading effect*/
+     
+    background:#A84040;
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 20px #FFFFFF;
+    border:1px solid #000;     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:10px 0px 10px 0px;
+    display: block;
+    position:relative;
+    text-align:center;
+    margin-right:60px;
+    margin-top:7px;
+    border:none;
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    text-shadow:1px 1px 10px #FFCC99;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FFF;
+    text-shadow:1px 1px 10px #CCC;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.php">Home</a></li>
+<li><a href="ebooks.php">E-books</a></li>
+<li><a href="placements.php">Placement Papers</a></li>
+<li><a href="quiz.php">Quiz</a></li>
+<li><a href="contactus.php">Contact Us</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>   
+
+<style>
+#menbut
+{
+border:1px solid black;background:#A84040;border-radius:10px;box-shadow: inset 1px 1px 5px #FFFFFF;-moz-box-shadow: inset 1px 1px 5px #FFFFFF;-webkit-box-shadow: inset 1px 1px 10px #FFFFFF;width:180px;height:38px;color:black;font-family:Andalus;font-size:23px;text-align:center;text-shadow:1px 1px 10px #FFCC99;
+}
+#menbut:hover
+{
+border:none;background-color:grey;width:180px;height:38px;color:white;font-family:Times New Roman;font-size:20px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 2px 1px red;text-shadow:1px 1px 1px black;
+}
+</style>
+</body>
+<div id="image"
+style="position:absolute;top:100px;left:20px;">
+        <img src="images/quiz.jpg">
+</div>
+
+<HEAD>
+
+<script LANGUAGE="JavaScript">
+
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+
+
+var score = 0;
+ans[1] = "a";
+ans[2] = "a";
+ans[3] = "c";
+ans[4] = "a";
+ans[5] = "c";
+ans[6] = "d";
+ans[7] = "e";
+ans[8] = "a";
+ans[9] = "d";
+ans[10] = "c";
+ans[11] = "b";
+ans[12] = "c";
+ans[13] = "c";
+ans[14] = "b";
+ans[15] = "b";
+ans[16] = "c";
+ans[17] = "a";
+ans[18] = "b";
+ans[19] = "d";
+ans[20] = "a";
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText=" ";
+for(i=1;i<=20;i++){
+answerText=answerText+"\nQuestion :"+i+"        ";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"Correct answer: "+ans[i]+"    ";;
+}
+else{
+answerText=answerText+"Correct! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\n\nYour total score is : "+score+"\n";
+
+alert(answerText);
+
+}
+
+</script>
+</HEAD>
+
+<div id="quiz"
+style="position:absolute;top:100px;left:200px;">
+<font size="4">
+<p class="question">
+1. Find the greatest number that will divide 43, 91 and 183 so as to leave the same remainder in each case.</p>
+<ul class="answers">
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) &nbsp;&nbsp; 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) &nbsp;&nbsp;7 <br><br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) &nbsp;&nbsp; 9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) &nbsp; 13 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+2. Which of the following fraction is the largest ?</p>
+<ul class="answers">
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) &nbsp;&nbsp; 7/8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) &nbsp;&nbsp;13/16 <br><br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) &nbsp;&nbsp; 31/40 &nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) &nbsp; 63/80 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+3. 0.009/?= .01
+</p>
+<ul class="answers">
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) &nbsp;&nbsp; .0009 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) &nbsp;&nbsp;.09 <br><br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) &nbsp;&nbsp; .9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) &nbsp;&nbsp; 9 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+4. The least perfect square, which is divisible by each of 21, 36 and 66 is:</p>
+<ul class="answers">
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) &nbsp;&nbsp; 213444 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) &nbsp;&nbsp; 214344 <br><br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) &nbsp;&nbsp; 214434 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) &nbsp;&nbsp; 231444 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+5. If x=(sqrt(3)+1)/(sqrt(3)-1) and y=(sqrt(3)-1)/(sqrt(3)+1),then value of (x2+y2) is:</p>
+<ul class="answers">
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) &nbsp;&nbsp; 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) &nbsp;&nbsp;13 <br><br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) &nbsp;&nbsp; 14 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) &nbsp; 15 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 6):
+Each of the questions given below consists of a question followed by three <br>statements. 
+You have to study the question and the statements and decide which of the statement(s) <br>is/are necessary to answer the question.<br><br>
+6. What is Arun's present age?<br><br>
+I. Five years ago, Arun's age was double that of his son's age at that time.<br><br>
+II.Present ages of Arun and his son are in the ratio of 11 : 6 respectively.<br><br>
+III. Five years hence, the respective ratio of Arun's age and his son's age will become 12 : 7.<br><br></p>
+<ul class="answers">
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) &nbsp;&nbsp; Only I and II &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) &nbsp;&nbsp;Only II and III <br><br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) &nbsp; Only I and III &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) &nbsp; Any two of the three
+ <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+7.If A = x% of y and B = y% of x, then which of the following is true?</p>
+<ul class="answers">
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) &nbsp;&nbsp; A is smaller than B.<br><br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) &nbsp;&nbsp;A is greater than B<br><br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) &nbsp;&nbsp; Relationship between A and B cannot be determined.<br><br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) &nbsp; If x is smaller than y, then A is greater than B. <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+8. If 20% of a = b, then b% of 20 is the same as:</p>
+<ul class="answers">
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) &nbsp;&nbsp; 4% of a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) &nbsp;&nbsp; 5% of a<br><br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) &nbsp;&nbsp; 20% of a&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) &nbsp; None of these <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+9. 3 pumps, working 8 hours a day, can empty a tank in 2 days. How many hours a day must 4 pumps <br>work to empty the tank in 1 day?</p>
+<ul class="answers">
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) &nbsp;&nbsp; 9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) &nbsp;&nbsp;10 <br><br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) &nbsp;&nbsp; 11 &nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) &nbsp; 12 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+10. One pipe can fill a tank three times as fast as another pipe. If together the two pipes can fill the tank <br>in 36 minutes, then the slower pipe alone will be able to fill the tank in:</p>
+<ul class="answers">
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) &nbsp;&nbsp; 81min &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) &nbsp;&nbsp;108min <br><br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) &nbsp;&nbsp; 144min &nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) &nbsp; 192min <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+11. A motorboat, whose speed in 15 km/hr in still water goes 30 km downstream and comes back in a <br>total of 4 hours 30 minutes. The speed of the stream (in km/hr) is:</p>
+<ul class="answers">
+<input type=radio name="q11" value="a" onClick="Engine(11, this.value)">a) &nbsp;&nbsp; 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q11" value="b" onClick="Engine(11, this.value)">b) &nbsp;&nbsp;5 <br><br>
+<input type=radio name="q11" value="c" onClick="Engine(11, this.value)">c) &nbsp;&nbsp; 6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q11" value="d" onClick="Engine(11, this.value)">d) &nbsp; 10 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+12. A man took loan from a bank at the rate of 12% p.a. simple interest. After 3 years he had to pay<br> Rs. 5400 interest only for the period. The principal amount borrowed by him was:</p>
+<ul class="answers">
+<input type=radio name="q12" value="a" onClick="Engine(12, this.value)">a) &nbsp;&nbsp; Rs. 2000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="b" onClick="Engine(12, this.value)">b) &nbsp;&nbsp;Rs. 10,000 <br><br>
+<input type=radio name="q12" value="c" onClick="Engine(12, this.value)">c) &nbsp;&nbsp; Rs. 15,000 &nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="d" onClick="Engine(12, this.value)">d) &nbsp; Rs. 20,000 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+13. A man walked diagonally across a square lot. Approximately, what was the percent saved by not<br> walking along the edges?</p>
+<ul class="answers">
+<input type=radio name="q13" value="a" onClick="Engine(13, this.value)">a) &nbsp;&nbsp; 20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="b" onClick="Engine(13, this.value)">b) &nbsp;&nbsp;24 <br><br>
+<input type=radio name="q13" value="c" onClick="Engine(13, this.value)">c) &nbsp;&nbsp; 30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="d" onClick="Engine(13, this.value)">d) &nbsp; 33 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+14. By investing in 16 2/3% stock at 64, one earns Rs. 1500. The investment made is:</p>
+<ul class="answers">
+<input type=radio name="q14" value="a" onClick="Engine(14, this.value)">a) &nbsp;&nbsp; Rs. 5640 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q14" value="b" onClick="Engine(14, this.value)">b) &nbsp;&nbsp;Rs. 5760 <br><br>
+<input type=radio name="q14" value="c" onClick="Engine(14, this.value)">c) &nbsp;&nbsp; Rs. 7500 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q14" value="d" onClick="Engine(14, this.value)">d) &nbsp; Rs. 9600 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+15.A man buys a watch for Rs. 1950 in cash and sells it for Rs. 2200 at a credit of 1 year. If the rate of interest is 10% per annum, the man: </p>
+<ul class="answers">
+<input type=radio name="q15" value="a" onClick="Engine(15, this.value)">a) &nbsp;&nbsp; gains Rs. 55 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="b" onClick="Engine(15, this.value)">b) &nbsp;&nbsp;gains Rs. 50 <br><br>
+<input type=radio name="q15" value="c" onClick="Engine(15, this.value)">c) &nbsp;&nbsp; loses Rs. 30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="d" onClick="Engine(15, this.value)">d) &nbsp; gains Rs. 30 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 16):
+Find the odd man out.<br><br>
+16.10, 25, 45, 54, 60, 75, 80 </p>
+<ul class="answers">
+<input type=radio name="q16" value="a" onClick="Engine(16, this.value)">a) &nbsp;&nbsp; 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="b" onClick="Engine(16, this.value)">b) &nbsp;&nbsp;45 <br><br>
+<input type=radio name="q16" value="c" onClick="Engine(16, this.value)">c) &nbsp;&nbsp; 54 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="d" onClick="Engine(16, this.value)">d) &nbsp; 75 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.Nos. 17 - 19):
+Find out the wrong number in the given sequence of numbers.<br><br>
+17. 582, 605, 588, 611, 634, 617, 600</p>
+<ul class="answers">
+<input type=radio name="q17" value="a" onClick="Engine(17, this.value)">a) &nbsp;&nbsp; 634 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="b" onClick="Engine(17, this.value)">b) &nbsp;&nbsp;611 <br><br>
+<input type=radio name="q17" value="c" onClick="Engine(17, this.value)">c) &nbsp;&nbsp; 605 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="d" onClick="Engine(17, this.value)">d) &nbsp; 600 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+18.36, 54, 18, 27, 9, 18.5, 4.5 </p>
+<ul class="answers">
+<input type=radio name="q18" value="a" onClick="Engine(18, this.value)">a) &nbsp;&nbsp; 4.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="b" onClick="Engine(18, this.value)">b) &nbsp;&nbsp;18.5 <br><br>
+<input type=radio name="q18" value="c" onClick="Engine(18, this.value)">c) &nbsp;&nbsp; 54 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="d" onClick="Engine(18, this.value)">d) &nbsp; 18 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+19. 56, 72, 90, 110, 132, 150</p>
+<ul class="answers">
+<input type=radio name="q19" value="a" onClick="Engine(19, this.value)">a) &nbsp;&nbsp; 72 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="b" onClick="Engine(19, this.value)">b) &nbsp;&nbsp;110 <br><br>
+<input type=radio name="q19" value="c" onClick="Engine(19, this.value)">c) &nbsp;&nbsp; 132 &nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="d" onClick="Engine(19, this.value)">d) &nbsp; 150 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 20):
+Insert the missing number.<br><br>
+20. 8, 24, 12, 36, 18, 54, (....)</p>
+<ul class="answers">
+<input type=radio name="q20" value="a" onClick="Engine(20, this.value)">a) &nbsp;&nbsp; 27 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="b" onClick="Engine(20, this.value)">b) &nbsp;&nbsp;108 <br><br>
+<input type=radio name="q20" value="c" onClick="Engine(20, this.value)">c) &nbsp;&nbsp; 68 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="d" onClick="Engine(20, this.value)">d) &nbsp; 72 <p>
+</ul>
+
+</font>
+</div>
+<div id="score"
+style="position:absolute;top:3850px;left:450px;">
+<br><br><br>
+
+<input type=button onClick="Score()" value="Well... How did I do?">
+
+
+</div>
+</body>
+</html>

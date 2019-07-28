@@ -1,0 +1,355 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<body background="images/image6.jpg">
+<center><br><br><br></center>
+
+<div id="main" style="position:absolute;top:170px;left:170px;width:1000px;height:5000px;border-radius: 40px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 7px 1px blue;background-color:white;border:2px solid brown;"
+</div>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:30px auto 0px auto;
+    width:800px;
+    height:55px;
+    padding:0px 20px 0px 20px;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:20px;
+    /*Styling the background with fading effect*/
+     
+    background:#A84040;
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 20px #FFFFFF;
+    border:1px solid #000;     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:10px 0px 10px 0px;
+    display: block;
+    position:relative;
+    text-align:center;
+    margin-right:60px;
+    margin-top:7px;
+    border:none;
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    text-shadow:1px 1px 10px #FFCC99;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FFF;
+    text-shadow:1px 1px 10px #CCC;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.php">Home</a></li>
+<li><a href="ebooks.php">E-books</a></li>
+<li><a href="placements.php">Placement Papers</a></li>
+<li><a href="quiz.php">Quiz</a></li>
+<li><a href="contactus.php">Contact Us</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>   
+
+<style>
+#menbut
+{
+border:1px solid black;background:#A84040;border-radius:10px;box-shadow: inset 1px 1px 5px #FFFFFF;-moz-box-shadow: inset 1px 1px 5px #FFFFFF;-webkit-box-shadow: inset 1px 1px 10px #FFFFFF;width:180px;height:38px;color:black;font-family:Andalus;font-size:23px;text-align:center;text-shadow:1px 1px 10px #FFCC99;
+}
+#menbut:hover
+{
+border:none;background-color:grey;width:180px;height:38px;color:white;font-family:Times New Roman;font-size:20px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 2px 1px red;text-shadow:1px 1px 1px black;
+}
+</style>
+</body>
+<div id="image"
+style="position:absolute;top:100px;left:20px;">
+        <img src="images/quiz.jpg">
+</div>
+
+<HEAD>
+
+<script LANGUAGE="JavaScript">
+
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+
+
+var score = 0;
+ans[1] = "b";
+ans[2] = "a";
+ans[3] = "c";
+ans[4] = "a";
+ans[5] = "a";
+ans[6] = "c";
+ans[7] = "d";
+ans[8] = "a";
+ans[9] = "b";
+ans[10] = "d";
+ans[11] = "b";
+ans[12] = "b";
+ans[13] = "c";
+ans[14] = "b";
+ans[15] = "b";
+ans[16] = "c";
+ans[17] = "a";
+ans[18] = "a";
+ans[19] = "d";
+ans[20] = "b";
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText=" ";
+for(i=1;i<=20;i++){
+answerText=answerText+"\nQuestion :"+i+"        ";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"Correct answer: "+ans[i]+"    ";;
+}
+else{
+answerText=answerText+"Correct! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\n\nYour total score is : "+score+"\n";
+
+alert(answerText);
+
+}
+
+</script>
+</HEAD>
+
+<div id="quiz"
+style="position:absolute;top:100px;left:200px;">
+<font size="4">
+<p class="question">
+1. In a regular week, there are 5 working days and for each day, the working hours are 8.A man gets <br>Rs. 2.40 per hour for regular work and Rs. 3.20 per hours for overtime. If he earns Rs. 432 in 4 weeks, <br>then how many hours does he work for ?</p>
+<ul class="answers">
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) &nbsp;&nbsp;160 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) &nbsp;&nbsp;175 <br><br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) &nbsp;&nbsp; 180 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) &nbsp; 195 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+2. ((sqrt(625)/11)(14/sqrt(25))(11/sqrt(196))) is equal to:</p>
+<ul class="answers">
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) &nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) &nbsp;&nbsp;6 <br><br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) &nbsp;&nbsp; 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) &nbsp; 11 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 3):
+Each of the questions given below consists of a question followed by three <br>statements. You have to study the question and the statements and decide which of the statement(s) <br>is/are necessary to answer the question.<br><br>
+3. In a cricket team, the average age of eleven players in 28 years. What is the age of the captain?<br><br>
+I. The captain is eleven years older than the youngest player.<br><br>
+II.The average age of 10 players, other than the captain is 27.3 years.<br><br>
+III.Leaving aside the captain and the youngest player, the average ages of three groups of three players<br> each are 25 years, 28 years and 30 years respectively.<br><br></p>
+<ul class="answers">
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) &nbsp;&nbsp; Any two of the three&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) &nbsp;&nbsp;All I, II and III<br><br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) &nbsp;&nbsp;II only or I and III only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) &nbsp;&nbsp;II and III only<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+4. In a two-digit, if it is known that its unit's digit exceeds its ten's digit by 2 and that the product of the<br> given number and the sum of its digits is equal to 144, then the number is:</p>
+<ul class="answers">
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) &nbsp;&nbsp; 24 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) &nbsp;&nbsp; 26 <br><br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) &nbsp;&nbsp; 42 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) &nbsp;&nbsp; 46 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+5. Find a positive number which when increased by 17 is equal to 60 times the reciprocal of the number.</p>
+<ul class="answers">
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) &nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) &nbsp;&nbsp;10 <br><br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) &nbsp;&nbsp; 17 &nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) &nbsp; 20 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+6. Ayesha's father was 38 years of age when she was born while her mother was 36 years old when her brother four years younger to her was born. What is the difference between the ages of her parents?</p>
+<ul class="answers">
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) &nbsp;&nbsp; 2 years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) &nbsp;&nbsp;4 years <br><br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) &nbsp; 6 years &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) &nbsp; 8 years <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 7):
+Each of the questions given below consists of a question followed by three <br>statements. You have to study the question and the statements and decide which of the statement(s)<br> is/are necessary to answer the question.<br><br>
+7.What is the present age of Tanya?<br><br>
+I.The ratio between the present ages of Tanya and her brother Rahul is 3 : 4 respectively.<br><br>
+II.After 5 years the ratio between the ages of Tanya and Rahul will be 4 : 5.<br><br>
+III.Rahul is 5 years older than Tanya.<br><br></p>
+<ul class="answers">
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) &nbsp;&nbsp; I and II only<br><br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) &nbsp;&nbsp;II and III only<br><br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) &nbsp;&nbsp; I and III only<br><br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) &nbsp; Any two of the three<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+8. In an election between two candidates, one got 55% of the total valid votes, 20% of the votes <br>were invalid. If the total number of votes was 7500, the number of valid votes that the other candidate <br>got, was:</p>
+<ul class="answers">
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) &nbsp;&nbsp; 2700&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) &nbsp;&nbsp; 2900<br><br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) &nbsp;&nbsp; 3000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) &nbsp; 3100<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+9. A trader mixes 26 kg of rice at Rs. 20 per kg with 30 kg of rice of other variety at Rs. 36 per kg and <br>sells the mixture at Rs. 30 per kg. His profit percent is:</p>
+<ul class="answers">
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) &nbsp;&nbsp; No profit, no loss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) &nbsp;&nbsp;5% <br><br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) &nbsp;&nbsp; 8% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) &nbsp; 10% <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 10):
+Each of the questions given below consists of a statement and / or a question <br>and two statements numbered I and II given below it. You have to decide whether the data <br>provided in the statement(s) is / are sufficient to answer the given question. <br>Read the both statements and<br><br>
+Give answer (A) if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question.<br><br>
+Give answer (B) if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question.<br><br>
+Give answer (C) if the data either in Statement I or in Statement II alone are sufficient to answer<br> the question.<br><br>
+Give answer (D) if the data even in both Statements I and II together are not sufficient to answer <br>the question.<br><br>
+Give answer(E) if the data in both Statements I and II together are necessary to answer the question.<br><br>
+10.A man mixes two types of rice (X and Y) and sells the mixture at the rate of Rs. 17 per kg. <br>Find his profit percentage.<br><br>
+I.The rate of X is Rs. 20 per kg.<br><br>
+II.The rate of Y is Rs. 13 per kg.<br><br></p>
+<ul class="answers">
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) &nbsp;&nbsp; I alone sufficient while II alone not sufficient to answer <br><br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) &nbsp;&nbsp;II alone sufficient while I alone not sufficient to answer <br><br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) &nbsp;&nbsp; Either I or II alone sufficient to answer<br><br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) &nbsp; Both I and II are not sufficient to answer <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+11.An industrial loom weaves 0.128 metres of cloth every second. Approximately, how many seconds<br> will it take for the loom to weave 25 metres of cloth?</p>
+<ul class="answers">
+<input type=radio name="q11" value="a" onClick="Engine(11, this.value)">a) &nbsp;&nbsp; 178 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q11" value="b" onClick="Engine(11, this.value)">b) &nbsp;&nbsp;195 <br><br>
+<input type=radio name="q11" value="c" onClick="Engine(11, this.value)">c) &nbsp;&nbsp; 204 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q11" value="d" onClick="Engine(11, this.value)">d) &nbsp; 488 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+12. A takes twice as much time as B or thrice as much time as C to finish a piece of work. Working <br>together, they can finish the work in 2 days. B can do the work alone in:</p>
+<ul class="answers">
+<input type=radio name="q12" value="a" onClick="Engine(12, this.value)">a) &nbsp;&nbsp; 4 days &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="b" onClick="Engine(12, this.value)">b) &nbsp;&nbsp;6 days <br><br>
+<input type=radio name="q12" value="c" onClick="Engine(12, this.value)">c) &nbsp;&nbsp; 8 days &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q12" value="d" onClick="Engine(12, this.value)">d) &nbsp; 12 days <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+13. If log 27 = 1.431, then the value of log 9 is:</p>
+<ul class="answers">
+<input type=radio name="q13" value="a" onClick="Engine(13, this.value)">a) &nbsp;&nbsp; 0.934 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="b" onClick="Engine(13, this.value)">b) &nbsp;&nbsp;0.945 <br><br>
+<input type=radio name="q13" value="c" onClick="Engine(13, this.value)">c) &nbsp;&nbsp;0.954 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q13" value="d" onClick="Engine(13, this.value)">d) &nbsp;0.958 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+14. If log10 2 = 0.3010, the value of log10 80 is:</p>
+<ul class="answers">
+<input type=radio name="q14" value="a" onClick="Engine(14, this.value)">a) &nbsp;&nbsp; 1.6020 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q14" value="b" onClick="Engine(14, this.value)">b) &nbsp;&nbsp;1.9030<br><br>
+<input type=radio name="q14" value="c" onClick="Engine(14, this.value)">c) &nbsp;&nbsp; 3.9030&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q14" value="d" onClick="Engine(14, this.value)">d) &nbsp; None of these <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+15. The ratio between the length and the breadth of a rectangular park is 3 : 2. If a man cycling along<br> the boundary of the park at the speed of 12 km/hr completes one round in 8 minutes, then the area <br>of the park (in sq. m) is: </p>
+<ul class="answers">
+<input type=radio name="q15" value="a" onClick="Engine(15, this.value)">a) &nbsp;&nbsp; 15360 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="b" onClick="Engine(15, this.value)">b) &nbsp;&nbsp;153600 <br><br>
+<input type=radio name="q15" value="c" onClick="Engine(15, this.value)">c) &nbsp;&nbsp; 30720 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q15" value="d" onClick="Engine(15, this.value)">d) &nbsp; 307200 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+16.The slant height of a right circular cone is 10 m and its height is 8 m. Find the area of its curved surface. </p>
+<ul class="answers">
+<input type=radio name="q16" value="a" onClick="Engine(16, this.value)">a) &nbsp;&nbsp; 30πm2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="b" onClick="Engine(16, this.value)">b) &nbsp;&nbsp;40πm2 <br><br>
+<input type=radio name="q16" value="c" onClick="Engine(16, this.value)">c) &nbsp;&nbsp; 60πm2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="d" onClick="Engine(16, this.value)">d) &nbsp; 80πm2<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+17. A man wants to sell his scooter. There are two offers, one at Rs. 12,000 cash and the other a credit <br>of Rs. 12,880 to be paid after 8 months, money being at 18% per annum. Which is the better offer?</p>
+<ul class="answers">
+<input type=radio name="q17" value="a" onClick="Engine(17, this.value)">a) &nbsp;&nbsp; Rs. 12,000 in cash &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="b" onClick="Engine(17, this.value)">b) &nbsp;&nbsp;s. 12,880 at credit <br><br>
+<input type=radio name="q17" value="c" onClick="Engine(17, this.value)">c) &nbsp;&nbsp; Both are equally good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q17" value="d" onClick="Engine(17, this.value)">d) &nbsp; [NIL] <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+18.The banker's discount of a certain sum of money is Rs. 72 and the true discount on the same sum<br> for the same time is Rs. 60. The sum due is:</p>
+<ul class="answers">
+<input type=radio name="q18" value="a" onClick="Engine(18, this.value)">a) &nbsp;&nbsp; Rs. 360 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="b" onClick="Engine(18, this.value)">b) &nbsp;&nbsp;Rs. 432 <br><br>
+<input type=radio name="q18" value="c" onClick="Engine(18, this.value)">c) &nbsp;&nbsp; Rs. 540&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q18" value="d" onClick="Engine(18, this.value)">d) &nbsp; Rs. 1080 <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+19. A man standing at a point P is watching the top of a tower, which makes an angle of elevation of <br>30º with the man's eye. The man walks some distance towards the tower to watch its top and the angle<br> of the elevation becomes 60º. What is the distance between the base of the tower and the point P?</p>
+<ul class="answers">
+<input type=radio name="q19" value="a" onClick="Engine(19, this.value)">a) &nbsp;&nbsp; 4(sqrt3) units&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="b" onClick="Engine(19, this.value)">b) &nbsp;&nbsp;8 units <br><br>
+<input type=radio name="q19" value="c" onClick="Engine(19, this.value)">c) &nbsp;&nbsp; 12 units &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q19" value="d" onClick="Engine(19, this.value)">d) &nbsp; Data inadequate <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 20):
+Insert the missing number.<br><br>
+20. 8, 7, 11, 12, 14, 17, 17, 22, (....)</p>
+<ul class="answers">
+<input type=radio name="q20" value="a" onClick="Engine(20, this.value)">a) &nbsp;&nbsp; 27 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="b" onClick="Engine(20, this.value)">b) &nbsp;&nbsp; 20<br><br>
+<input type=radio name="q20" value="c" onClick="Engine(20, this.value)">c) &nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q20" value="d" onClick="Engine(20, this.value)">d) &nbsp;  24<p>
+</ul>
+
+</font>
+</div>
+<div id="score"
+style="position:absolute;top:4790px;left:450px;">
+<br><br><br>
+
+<input type=button onClick="Score()" value="Well... How did I do?">
+
+
+</div>
+</body>
+</html>

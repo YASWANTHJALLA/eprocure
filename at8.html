@@ -1,0 +1,352 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body background="images/image6.jpg">
+<center><br><br><br></center>
+
+<div id="main" style="position:absolute;top:170px;left:170px;width:1000px;height:4500px;border-radius: 40px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 7px 1px blue;background-color:white;border:2px solid brown;"
+</div>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:30px auto 0px auto;
+    width:800px;
+    height:55px;
+    padding:0px 20px 0px 20px;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:20px;
+    /*Styling the background with fading effect*/
+     
+    background:#A84040;
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 20px #FFFFFF;
+    border:1px solid #000;     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:10px 0px 10px 0px;
+    display: block;
+    position:relative;
+    text-align:center;
+    margin-right:60px;
+    margin-top:7px;
+    border:none;
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    text-shadow:1px 1px 10px #FFCC99;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FFF;
+    text-shadow:1px 1px 10px #CCC;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.php">Home</a></li>
+<li><a href="ebooks.php">E-books</a></li>
+<li><a href="placements.php">Placement Papers</a></li>
+<li><a href="quiz.php">Quiz</a></li>
+<li><a href="contactus.php">Contact Us</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>   
+
+<style>
+#menbut
+{
+border:1px solid black;background:#A84040;border-radius:10px;box-shadow: inset 1px 1px 5px #FFFFFF;-moz-box-shadow: inset 1px 1px 5px #FFFFFF;-webkit-box-shadow: inset 1px 1px 10px #FFFFFF;width:180px;height:38px;color:black;font-family:Andalus;font-size:23px;text-align:center;text-shadow:1px 1px 10px #FFCC99;
+}
+#menbut:hover
+{
+border:none;background-color:grey;width:180px;height:38px;color:white;font-family:Times New Roman;font-size:20px;-moz-border-radius:8px;-moz-box-shadow:0px 0px 2px 1px red;text-shadow:1px 1px 1px black;
+}
+</style>
+</body>
+<div id="image"
+style="position:absolute;top:100px;left:20px;">
+        <img src="images/quiz.jpg">
+</div>
+
+<HEAD>
+
+<script LANGUAGE="JavaScript">
+
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+
+
+var score = 0;
+ans[1] = "b";
+ans[2] = "b";
+ans[3] = "b";
+ans[4] = "d";
+ans[5] = "d";
+ans[6] = "d";
+ans[7] = "b";
+ans[8] = "a";
+ans[9] = "d";
+ans[10] = "e";
+ans[11] = "b";
+ans[12] = "b";
+ans[13] = "b";
+ans[14] = "b";
+ans[15] = "a";
+ans[16] = "d";
+ans[17] = "a";
+ans[18] = "d";
+ans[19] = "d";
+ans[20] = "c";
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText=" ";
+for(i=1;i<=20;i++){
+answerText=answerText+"\nQuestion :"+i+"        ";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"Correct answer: "+ans[i]+"    ";;
+}
+else{
+answerText=answerText+"Correct! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\n\nYour total score is : "+score+"\n";
+
+alert(answerText);
+
+}
+
+</script>
+</HEAD>
+
+<div id="quiz"
+style="position:absolute;top:100px;left:200px;">
+<font size="4">
+<p class="question">
+1.  The product of two numbers is 2028 and their H.C.F. is 13. The number of such pairs is:</p>
+<ul class="answers">
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) &nbsp;&nbsp;2<br><br>   
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) &nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) &nbsp;&nbsp;4   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+2.  What will be the least number which when doubled will be exactly divisible by 12, 18, 21 and 30 ?</p>
+<ul class="answers">
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) &nbsp;&nbsp;196&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) &nbsp;&nbsp;630<br><br>    
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) &nbsp;&nbsp;1260&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) &nbsp;&nbsp;2520      <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+3.  The difference between a two-digit number and the number obtained by interchanging the positions of its digits is 36. What is the difference between the two digits of that number?</p>
+<ul class="answers">
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) &nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) &nbsp;&nbsp;4<br><br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) &nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) &nbsp;&nbsp;9  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+4.  The sum of the digits of a two-digit number is 15 and the difference between the digits is 3. What is the two-digit number?</p>
+<ul class="answers">
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) &nbsp;&nbsp;69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) &nbsp;&nbsp;78<br><br> 
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) &nbsp;&nbsp;96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) &nbsp;&nbsp;None of these  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+5.  A number consists of two digits. If the digits interchange places and the new number is added to the <br>original number, then the resulting number will be divisible by:</p>
+<ul class="answers">
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a)&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b)&nbsp;&nbsp;5<br><br> 
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c)&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d)&nbsp;&nbsp;11  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+6.  If m and n are whole numbers such that m^n = 121, the value of (m - 1)^n + 1 is:</p>
+<ul class="answers">
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a)&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b)&nbsp;&nbsp;10<br><br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c)&nbsp;&nbsp;121&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d)&nbsp;&nbsp;1000<p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+7.   A shopkeeper sells some toys at Rs. 250 each. What percent profit does he make? To find the answer, which of the following information given in Statements I and II is/are necessary?<br><br>
+    I.Number of toys sold.<br><br>
+    II.Cost price of each toy.</p>
+<ul class="answers">
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a)&nbsp;&nbsp;Only I is necessary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b)&nbsp;&nbsp;Only II is necessary<br><br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c)&nbsp;&nbsp;Both I and II are necessary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d)&nbsp;&nbsp;Either I or II ins necessary <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+8.  A 270 metres long train running at the speed of 120 kmph crosses another train running in opposite<br> direction at the speed of 80 kmph in 9 seconds. What is the length of the other train?</p>
+<ul class="answers">
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a)&nbsp;&nbsp;230m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b)&nbsp;&nbsp;240m<br><br> 
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c)&nbsp;&nbsp;260m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d)&nbsp;&nbsp;320m <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+9.  A train 108 m long moving at a speed of 50 km/hr crosses a train 112 m long coming from opposite direction in 6 seconds. The speed of the second train is:</p>
+<ul class="answers">
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a)&nbsp;&nbsp;48 km/hr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b)&nbsp;&nbsp;54 km/hr<br><br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c)&nbsp;&nbsp;66 km/hr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d)&nbsp;&nbsp;82 km/hr <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 10):
+Each of the questions given below consists of a statement and / or a question and two statements numbered I and II given below it. You have to decide whether the data provided in the statement(s) is / are sufficient to answer the given question. Read the both statements and<br><br>
+Give answer (A) if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question.<br><br>
+Give answer (B) if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question.<br><br>
+Give answer (C) if the data either in Statement I or in Statement II alone are sufficient to answer the <br>question.<br><br>
+Give answer (D) if the data even in both Statements I and II together are not sufficient to answer the <br>question.<br><br>
+Give answer(E) if the data in both Statements I and II together are necessary to answer the question.<br><br>
+10.  What is the length of a running train crossing another 180 metre long train running in the opposite direction?<br><br>
+     I. The relative speed of the two trains was 150 kmph.<br><br>
+     II.The trains took 9 seconds to cross each other.</p>
+<ul class="answers">
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a)&nbsp;&nbsp;I alone sufficient while II alone not sufficient to answer<br><br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b)&nbsp;&nbsp;II alone sufficient while I alone not sufficient to answer<br><br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c)&nbsp;&nbsp;Either I or II alone sufficient to answer<br><br> 
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d)&nbsp;&nbsp;Both I and II are not sufficient to answer<br><br>
+<input type=radio name="q10" value="e" onClick="Engine(10, this.value)">e)&nbsp;&nbsp;Both I and II are necessary to answer <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+11.  Which of the following statements is not correct?</p>
+<ul class="answers">
+<input type=radio name="q11" value="a" onClick="Engine(11, this.value)">a)&nbsp;&nbsp;log10 base10 = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q11" value="b" onClick="Engine(11, this.value)">b)&nbsp;&nbsp;log (2 + 3) = log (2 x 3)<br><br>  
+<input type=radio name="q11" value="c" onClick="Engine(11, this.value)">c)&nbsp;&nbsp;log1 base 10 = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q11" value="d" onClick="Engine(11, this.value)">d)&nbsp;&nbsp;log (1 + 2 + 3) = log 1 + log 2 + log 3  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+12.  The ratio between the perimeter and the breadth of a rectangle is 5 : 1. If the area of the rectangle is 216 sq. cm, what is the length of the rectangle?</p>
+<ul class="answers">
+<input type=radio name="q12" value="a" onClick="Engine(12, this.value)">a)&nbsp;&nbsp;16cm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q12" value="b" onClick="Engine(12, this.value)">b)&nbsp;&nbsp;18cm<br><br>  
+<input type=radio name="q12" value="c" onClick="Engine(12, this.value)">c)&nbsp;&nbsp;24cm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q12" value="d" onClick="Engine(12, this.value)">d)&nbsp;&nbsp;Data Inadequate  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+13.  A rectangular park 60 m long and 40 m wide has two concrete crossroads running in the middle of the <br>park and rest of the park has been used as a lawn. If the area of the lawn is 2109 sq. m, then what is the <br>width of the road?</p>
+<ul class="answers">
+<input type=radio name="q13" value="a" onClick="Engine(13, this.value)">a)&nbsp;&nbsp;2.91m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q13" value="b" onClick="Engine(13, this.value)">b)&nbsp;&nbsp;3m<br><br>  
+<input type=radio name="q13" value="c" onClick="Engine(13, this.value)">c)&nbsp;&nbsp;5.82m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q13" value="d" onClick="Engine(13, this.value)">d)&nbsp;&nbsp;None of these   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+14.  A boat having a length 3 m and breadth 2 m is floating on a lake. The boat sinks by 1 cm when a man <br>gets on it. The mass of the man is:</p>
+<ul class="answers">
+<input type=radio name="q14" value="a" onClick="Engine(14, this.value)">a)&nbsp;&nbsp;12kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q14" value="b" onClick="Engine(14, this.value)">b)&nbsp;&nbsp;60kg<br><br> 
+<input type=radio name="q14" value="c" onClick="Engine(14, this.value)">c)&nbsp;&nbsp;72kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q14" value="d" onClick="Engine(14, this.value)">d)&nbsp;&nbsp;96kg   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+15.  A can run 22.5 m while B runs 25 m. In a kilometre race B beats A by:</p>
+<ul class="answers">
+<input type=radio name="q15" value="a" onClick="Engine(15, this.value)">a)&nbsp;&nbsp;100m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q15" value="b" onClick="Engine(15, this.value)">b)&nbsp;&nbsp;111 1/9m <br><br> 
+<input type=radio name="q15" value="c" onClick="Engine(15, this.value)">c)&nbsp;&nbsp;25m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+<input type=radio name="q15" value="d" onClick="Engine(15, this.value)">d)&nbsp;&nbsp;50m  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+16.  In how many different ways can the letters of the word 'CORPORATION' be arranged so that the <br>vowels always come together?</p>
+<ul class="answers">
+<input type=radio name="q16" value="a" onClick="Engine(16, this.value)">a)&nbsp;&nbsp;810&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q16" value="b" onClick="Engine(16, this.value)">b)&nbsp;&nbsp;1440<br><br>  
+<input type=radio name="q16" value="c" onClick="Engine(16, this.value)">c)&nbsp;&nbsp;2880&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=radio name="q16" value="d" onClick="Engine(16, this.value)">d)&nbsp;&nbsp;50400   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+17.  In a box, there are 8 red, 7 blue and 6 green balls. One ball is picked up randomly. What is the probability that it is neither red nor green?</p>
+<ul class="answers">
+<input type=radio name="q17" value="a" onClick="Engine(17, this.value)">a)&nbsp;&nbsp;1/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q17" value="b" onClick="Engine(17, this.value)">b)&nbsp;&nbsp;3/4<br><br>   
+<input type=radio name="q17" value="c" onClick="Engine(17, this.value)">c)&nbsp;&nbsp;7/19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q17" value="d" onClick="Engine(17, this.value)">d)&nbsp;&nbsp;8/21   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 18):
+Find the odd man out.<br><br>
+18.  3, 5, 7, 12, 17, 19</p>
+<ul class="answers">
+<input type=radio name="q18" value="a" onClick="Engine(18, this.value)">a)&nbsp;&nbsp;19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type=radio name="q18" value="b" onClick="Engine(18, this.value)">b)&nbsp;&nbsp;17<br><br>  
+<input type=radio name="q18" value="c" onClick="Engine(18, this.value)">c)&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q18" value="d" onClick="Engine(18, this.value)">d)&nbsp;&nbsp;12  <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 19):
+Find out the wrong number in the given sequence of numbers.<br><br>
+19.   6, 13, 18, 25, 30, 37, 40</p>
+<ul class="answers">
+<input type=radio name="q19" value="a" onClick="Engine(19, this.value)">a)&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q19" value="b" onClick="Engine(19, this.value)">b)&nbsp;&nbsp;30<br><br>  
+<input type=radio name="q19" value="c" onClick="Engine(19, this.value)">c)&nbsp;&nbsp;37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q19" value="d" onClick="Engine(19, this.value)">d)&nbsp;&nbsp;40   <p>
+</ul>
+-----------------------------------------------------------------------------------------------------------------------------------
+<p class="question">
+Direction (for Q.No. 20):
+Find out the wrong number in the series.<br><br>
+20.   3, 7, 15, 39, 63, 127, 255, 511</p>
+<ul class="answers">
+<input type=radio name="q20" value="a" onClick="Engine(20, this.value)">a)&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q20" value="b" onClick="Engine(20, this.value)">b)&nbsp;&nbsp;15<br><br>  
+<input type=radio name="q20" value="c" onClick="Engine(20, this.value)">c)&nbsp;&nbsp;39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type=radio name="q20" value="d" onClick="Engine(20, this.value)">d)&nbsp;&nbsp;63   <p>
+</ul>
+
+</font>
+</div>
+<div id="score"
+style="position:absolute;top:4350px;left:450px;">
+<br><br><br>
+
+<input type=button onClick="Score()" value="Well... How did I do?">
+
+
+</div>
+</body>
+</html>
